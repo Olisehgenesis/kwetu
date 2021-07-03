@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Kwetu Booking System</title>
+  <title>kwetu</title>
+  <link rel = "icon" href ="./images/kwetu.jpeg" type = "image/x-icon">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./bootstrap3/css/bootstrap.min.css">
@@ -18,15 +19,22 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">logo
+      <a class="navbar-brand" href="#"><img src="./images/kwetu.jpeg" alt="logo" class="logo">
+
       </a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse" >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+    
+      <ul class="nav navbar-nav ">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
      
-        <li><a href="#">Projects</a></li>
+        <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
         <form class="navbar-form navbar-right" role="search">
           <div class="form-group">
@@ -41,13 +49,13 @@
         <li>
             @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/dashboard') }}">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}"><button class="btn btn-default">Dashboard</button></a>
                     @else
-                        <a href="{{ route('login') }}"> <span class="glyphicon glyphicon-log-in text-primary">Login</a>
+                        <a href="{{ route('login') }}"><button class="btn btn-default">login</button></a>
         </li>
         <li>
                         @if (Route::has('register'))
-                           <a href="{{ route('register') }}"><span class="text-primary"> Register</a>
+                           <a href="{{ route('register') }}"><button class="btn btn-default">Register</button></a>
                         @endif
                     @endauth
                 </div>
@@ -61,9 +69,10 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-  
+        
+        <p><strong>BOOKINGS AND ORDERS</strong></p>
         <div class="input-group-btn">
-          <button class="btn btn-default dropdown-tooggle " data-toggle="dropdown"><span class="text-danger">Busses</span> <span class="caret"></span></button>
+          <button class="btn btn-default dropdown-tooggle " data-toggle="dropdown"><span class="textColor">Buses</span> <span class="caret"></span></button>
      
           <ul class="dropdown-menu">
             <li><a href="###">Gaaga</a></li>
@@ -74,92 +83,115 @@
           </ul>
         </div><br>
         <div class="input-group-btn">
-          <button class="btn btn-default dropdown-tooggle" data-toggle="dropdown"><span class="text-danger">Taxes</span> <span class="caret"></span></button><
+          <button class="btn btn-default dropdown-tooggle" data-toggle="dropdown"><span class="textColor">Taxes</span> <span class="caret"></span></button><
      
           <ul class="dropdown-menu">
-            <li><a href="###">mg</a></li>
-            <li><a href="###">mg</a></li>
-            <li><a href="###">serve</a></li>
-            <li><a href="###">serve</a></li>
-            <li><a href="###">serve</a></li>
+            <span>TO:</span>
+            <li><a href="###">Arua</a></li>
+            <li><a href="###">Koboko</a></li>
+            <li><a href="###">Nebbi</a></li>
+            <li><a href="###">Kampala</a></li>
+            <li><a href="###">Yumbe</a></li>
           </ul>
         </div><br>
         <div class="input-group-btn">
-          <button class="btn btn-default dropdown-tooggle " data-toggle="dropdown"><span class="text-danger">Hotels</span> <span class="caret"></span></button>
+          <button class="btn btn-default dropdown-tooggle " data-toggle="dropdown"><span class="textColor">Hotels</span> <span class="caret"></span></button>
      
           <ul class="dropdown-menu ">
             <li ><a href="###">Tropical</a></li>
             <li ><a href="###">Desert breeze</a></li>
-            <li><a href="###">tropical</a></li>
-            <li><a href="###">desert breeze</a></li>
+            <li><a href="###">White Castle</a></li>
+            <li><a href="###">Slumberland</a></li>
            
           </ul>
         </div><br>
         <div class="input-group-btn">
-          <button class="btn btn-default dropdown-tooggle " data-toggle="dropdown"><span class="text-danger">Apartments</span>  <span class="caret"></span></button>
+          <button class="btn btn-default dropdown-tooggle " data-toggle="dropdown"><span class="textColor">Apartments</span>  <span class="caret"></span></button>
      
           <ul class="dropdown-menu">
-            <li><a href="###">GAAGA</a></li>
-            <li><a href="###">BABY</a></li>
-            <li><a href="###">KKT</a></li>
-            <li><a href="###">NILEstar</a></li>
-            <li><a href="###">YY</a></li>
+            <li><a href="###">Tripplex</a></li>
+            <li><a href="###">Rock_shadow</a></li>
+            <li><a href="###">Rose villa</a></li>
+         
           </ul>
         </div><br>
         <div class="input-group-btn">
-          <button class="btn btn-default dropdown-tooggle" data-toggle="dropdown"><span class="text-danger">P_green</span> <span class="caret"></span></button>
+          <button class="btn btn-default dropdown-tooggle" data-toggle="dropdown"><span class="textColor">Pawagreen_store</span> <span class="caret"></span></button>
      
           <ul class="dropdown-menu">
-            <li><a href="###">GAAGA</a></li>
-            <li><a href="###">BABY</a></li>
-            <li><a href="###">KKT</a></li>
-            <li><a href="###">NILEstar</a></li>
-            <li><a href="###">YY</a></li>
+            <li><a href="###">Solar_stove</a></li>
+            <li><a href="###">Solar_bag</a></li>
+            <li><a href="###">kwetu</a></li>
+            <li><a href="###">Solar_bicycle</a></li>
           </ul>
         </div><br>
         
-
     
      </div>
     
     <div class="col-sm-8 text-left "  > 
-    <div class="well well-sm text-center">
-        <p id="clickme">Do you want more updates on online booking items? <br>If yes, click on the button below and you will receive an email soon.</p>
-        <button class="btn btn-primary">more Updates</button>
-      </div>
+    
       <div class="well text-center">
-        <p>KWETU PROJECTS</p>
+        <p><strong class="textColor">WELCOME TO KWETU ONLINE BOOKING SYSTEM</strong><marquee behavior="" direction="">You can book buses, taxes, hotels, apartments wherever you are with us</marquee></p>
       </div>
-      <div class="panel panel-body">
-      <a href="" class="thumbnail">
+      <div>
+    
            
-           <img src="/images/KK-bus.jpg" alt="">
+      <div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="./images/KK-bus.jpg" alt="first slide" class="imageSize">
+      </div>
+
+      <div class="item">
+        <img src="./images/KK-bus.jpg"  alt="second slide" class="imageSize">
+      </div>
+    
+      <div class="item">
+        <img src="./images/KK-bus.jpg"  alt="third slide" class="imageSize">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
           </a>
       </div>
-      <div class="well text-center">
-        <p>ORDERS</p>
-      </div>
+      <div class="well">
+        <p>Incoming projexts are, solor items like bags, bicycles and stoves.
+        </p>        
+      </div> 
      
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
-        <p>UPCOMING NEWS</p>
+        <h1 class="textColor">UPCOMING NEWS</h1>
+        We are glad to inform you that we also offer security to your ordered goods.
       </div>
       <div class="well">
-        <p>KWETU PROJECTS</p>
+        <p>Incoming projexts.
+        </p>        
       </div>
-      <div class="well">
-        <p>SERVICES</p>
-      </div>
-      <div class="well">
-        <p>ORDERS</p>
-      </div>
-      <div class="well">
-        <p>SERVICES</p>
-      </div>
-      <div class="well">
-        <p id="clickme" >ORDERS</p>
-      </div>
+     
+    
+      
     </div>
   </div>
 </div>
@@ -169,12 +201,9 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script src="./bootstrap3/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-  $("p").click(function(){
-    $("#clickme").hide();
-  });
+
 });
 </script>
 </body>
