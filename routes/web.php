@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\productController;
+use App\Http\Controllers\busformController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::view('busform',"busForm");
+//Route::post('busform',[busformController::class,"addData"]);
+Route::post('busform',[busformController::class,"addData"])->name ('addData.save');
 
 
 Route::get('/dashboard', function () {
